@@ -10,6 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/crislin2046/beamsplitter.git"
   },
+  "keywords": [
+    "s-box",
+    "hash",
+    "digest",
+    "hash function"
+  ],
   "author": "@dosy",
   "license": "MIT",
   "bugs": {
