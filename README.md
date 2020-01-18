@@ -2,6 +2,12 @@
 
 A very simple S-BOX only hash. 
 
+# Get
+
+```console
+npm i beamsplitter
+```
+
 ## accolades
 
 Passes Dieharder.
