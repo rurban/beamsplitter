@@ -1,0 +1,23 @@
+{
+  "name": "beamsplitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -r esm test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crislin2046/beamsplitter.git"
+  },
+  "author": "@dosy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crislin2046/beamsplitter/issues"
+  },
+  "homepage": "https://github.com/crislin2046/beamsplitter#readme",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "utf8str": "^1.0.4"
+  }
+}
