@@ -1,6 +1,6 @@
 # beamsplitter
 
-A very simple S-BOX only hash. 
+A very simple S-box only hash.
 
 # Get
 
@@ -148,3 +148,11 @@ Preparing to run test 209.  ntuple = 0
 
 
 ```
+
+# how were the s-boxes generated?
+
+I went to random.org and generated 32 sets of 256 no-repeat numbers between 0 and 255 inclusive.
+
+# are the s-boxes perfect?
+
+I don't know. 
