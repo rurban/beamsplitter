@@ -20,10 +20,10 @@ Passes Dieharder.
 ## Test vectors
 
 ```text
-0000000000                      1f8f4631de2d2b25
-0000000abc                      2f79311058a7cb5e
-0000000abd                      e17250d28fdfebe1
-000000cris                      ad9795c229dfcad3
+0000000000                       1f8f4631de2d2b25
+0000000abc                       2f79311058a7cb5e
+0000000abd                       e17250d28fdfebe1
+000000cris                       ad9795c229dfcad3
 00000000Foo © bar 𝌆 baz ☃ qux   55f4b5a313fe8af7
 ````
 
