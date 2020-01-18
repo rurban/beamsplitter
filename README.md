@@ -8,7 +8,8 @@ Passes Dieharder.
 
 ## work in progress
 
-c source to run SMHasher tests
+1. c source to run SMHasher tests
+2. browser compatible build
 
 ## Dieharder test results
 
