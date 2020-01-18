@@ -1,6 +1,10 @@
 # beamsplitter
 
-A very simple S-box only hash. 
+A very simple S-box only hash.
+
+No moving parts. S-boxes all the way down. 
+
+No mults, adds, divs, shifts, mods, complements, or magic numbers. Nothing but box. S-box. 
 
 # Get
 
