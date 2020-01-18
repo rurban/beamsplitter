@@ -1,4 +1,4 @@
-# [beamsplitter](https://github.com/dosyago/beamsplitter) ![npm downloads](https://img.shields.io/npm/dt/beamsplitter) ![version](https://img.shields.io/npm/v/beamsplitter)
+# :stars: [beamsplitter](https://github.com/dosyago/beamsplitter) ![npm downloads](https://img.shields.io/npm/dt/beamsplitter) ![version](https://img.shields.io/npm/v/beamsplitter)
 
 A very simple S-box only hash.
 
