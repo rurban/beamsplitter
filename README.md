@@ -1,6 +1,6 @@
 # beamsplitter
 
-A very simple S-BOX only hash. 
+A very simple S-box only hash. 
 
 # Get
 
