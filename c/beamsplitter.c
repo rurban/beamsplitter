@@ -1,5 +1,6 @@
 #include "beamsplitter.h"
-#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 
 typedef uint8_t sbox_t[8][256];
 
@@ -644,14 +645,34 @@ void round_fn(uint64_t *state64, const uint64_t *m64, const int len) {
 }
 
 uint64_t beamsplitter(const uint8_t *key, const int len, const uint64_t seed) {
-  const uint64_t seed64[2] = {seed, seed};
-  const uint64_t *key64 = (uint64_t *)key;
+  uint64_t seed64[2] = {seed, seed};
+  uint64_t *key64 = (uint64_t *)key;
   uint64_t state64[2] = {0L, 0L};
+#ifdef HAVE_ASAN // or valgrind
+  uint64_t stack[1024 / 8];
+  int rest = len % 8;
+  if (rest)
+    {
+      /* safe 0 padding (very unfortunate to copy all) */
+      int len64 = (len / 8) + 1;
+      rest = 8 - rest;
+      if (len < 1024)
+        key64 = stack;
+      else
+        key64 = malloc (len + rest);
+      memset (&((uint8_t*)key64)[len & 0xfffffff0], 0, 8);
+      memcpy (key64, key, len);
+    }
+#endif
 
   round_fn (state64, seed64, 16);
   round_fn (state64, key64, len);
   round_fn (state64, seed64, 16);
   round_fn (state64, key64, len);
 
+#ifdef HAVE_ASAN // or valgrind
+  if (rest && len >= 1024)
+    free (key64);
+#endif
   return *(uint64_t*)state64;
 }
