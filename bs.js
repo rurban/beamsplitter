@@ -30,8 +30,8 @@ import zlib from 'zlib';
 
     function round( m64, m8, state64, state8 ) {
       m64.forEach( (val,index) => {
-        state64[index&7] ^= m64[index];
-        if ( index&3 == 0 && index != 0 ) {
+        state64[index % 4] ^= m64[index];
+        if ( index & 3 == 0 && index != 0 ) {
           mix( state64, state8, S[0], S[1] );
         }
       });
